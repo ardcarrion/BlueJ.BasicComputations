@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class IntegerPrinter {
 
-    public String printIntegerAsBinary(int value){
+    public static String printIntegerAsBinary(int value){
         return Integer.toBinaryString(value);
     }
 
-    public String printIntegerAsOctal(int value){
+    public static String printIntegerAsOctal(int value){
         return Integer.toOctalString(value);
     }
 
-    public String printIntegerAsHexadecimal(int value){
+    public static String printIntegerAsHexadecimal(int value){
         return Integer.toHexString(value);
     }
 
@@ -21,9 +21,9 @@ public class IntegerPrinter {
         Scanner in = new Scanner(System.in);
         int number = in.nextInt();
         
-        String binaryRep = Integer.toBinaryString(number);
-        String octalRep = Integer.toOctalString(number);
-        String hexRep = Integer.toHexString(number);
+        String binaryRep = printIntegerAsBinary(number);
+        String octalRep = printIntegerAsOctal(number);
+        String hexRep = printIntegerAsHexadecimal(number);
         
         System.out.printf("In binary %d is: %s\n", number, binaryRep);
         System.out.printf("In octal %d is: %s\n", number, octalRep);
